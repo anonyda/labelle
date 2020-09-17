@@ -1,0 +1,195 @@
+@font-face{
+    font-family: 'Halimun';
+    src: url('fonts/Halimun.ttf');
+}
+
+@font-face{
+    font-family: 'Marbre';
+    src: url('fonts/Marbre.otf');
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Lora', serif;
+    color: #222;
+}
+
+.navbar{
+    padding: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.navbar-nav li{
+    padding-right: 1.3rem;
+}
+.nav-link{
+    font-size: 0.9em !important;
+}
+
+.bg-dark{
+    background-color: transparent;
+}
+
+.btn-primary{
+    background-color: goldenrod;
+    border: none;
+    
+}
+.btn-primary:hover{
+    background-color: #c69305;
+    border: none;
+}
+.landing-buttons{
+    transform: translateX(-50px);
+}
+.padding{
+    padding-bottom: 1.8rem;
+}
+.welcome{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 1.8rem;
+}
+
+#fixed{
+    background-image: url('img/carousel-1.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.block{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+.cursive{
+    font-family: Halimun;
+    font-weight: 300;
+}
+
+#logo{
+    font-family: Marbre;
+    font-size: xx-large ;
+}
+#logo-cap{
+    font-family: Halimun;
+}
+
+.landing{
+    background: url("img/carousel-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    background-blend-mode: multiply;
+}
+
+#parallax{
+    background: url('img/carousel-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#parallax-2{
+    background: url('img/carousel-3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#parallax-3{
+    background: url('img/carousel-4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    background-blend-mode: multiply;
+}
+
+.full-page{
+    height: 100%;
+}
+
+.social a{
+    font-size: 4.5em;
+    padding: 3rem;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00aced;
+}
+.fa-instagram{
+    color: #517fa8;
+}
+.fa-youtube{
+    color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover{
+    color: #d5d5d5;
+}
+
+footer{
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+hr.light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+hr.light-100{
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px){
+    .social a{
+        font-size: 4em;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .landing-logo{
+        size: 75%;
+    }
+    .landing-buttons .btn{
+        font-size: 95%;
+        padding: 8px 14px;
+        transform: translateX(45px);
+    }
+    .display-4{
+        font-size: xx-large;
+    }
+    .social a{
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+    .salon{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .block{
+        font-size: 95%;
+    }
+}
+
+
+[class*="col-"]{
+    padding: 2rem;
+}
