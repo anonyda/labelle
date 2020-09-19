@@ -105,8 +105,17 @@ html, body{
 #parallax{
     background: url('img/carousel-2.jpg') no-repeat center center fixed;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+#parallax > div{
+    position: relative;
+    top: 40%;
+    left: 0%;
+    font-size: xx-large;
+    color:#fff;
+    background-color: rgb(0,0,0, 0.5);
 }
 
 #parallax-2{
@@ -114,6 +123,14 @@ html, body{
     background-size: cover;
     width: 100%;
     height: 100%;
+}
+#parallax-2 > div{
+    position: relative;
+    top: 40%;
+    left: 0%;
+    font-size: xx-large;
+    color:#fff;
+    background-color: rgb(0,0,0, 0.5);
 }
 
 #parallax-3{
@@ -123,6 +140,14 @@ html, body{
     height: 100%;
     background-color: gray;
     background-blend-mode: multiply;
+}
+#parallax-3 > div{
+    position: relative;
+    top: 40%;
+    left: 0%;
+    font-size: xx-large;
+    color:#fff;
+    background-color: rgb(0,0,0, 0.5);
 }
 
 .full-page{
@@ -214,10 +239,11 @@ html, body{
 
   
 .center { 
-    position: absolute; 
-    top: 42%;  
-    left: 50%;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 /* about page */
@@ -225,17 +251,26 @@ html, body{
 .about{
     background: url("img/about.jpg") no-repeat center center fixed;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: gray;
     background-blend-mode: multiply;
 }
 
-.about-cont{
-    position: absolute;
-    top: 40%;
+.about-heading{
+    height: 50vh;
+    width: 100vw;
+    top: 30%;
+    left: 35%;
     color: goldenrod;
-    font-size: 500%;
+}
+
+.about-content{
+    height: 50vh;
+    width: 100vw;
+    color: white;
+    background-color: rgb(0,0,0, 0.5);
+    font-size: large;
 }
 
 footer{
@@ -256,6 +291,44 @@ hr.light-100{
     margin-bottom: 1rem;
 }
 
+/* Services Page */
+
+.services{
+    background: url("img/services.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    
+}
+
+.services .about-heading{
+    color: white;
+}
+
+/*Products*/
+
+.carousel-inner .carousel-item img{
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Contact*/
+
+.contact{
+    background: url("img/makeup-banner-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+}
+.contact-form{
+    padding-left: 5em; 
+    padding-right: 5em;
+}
+.contact-deets{
+    padding-left: 5em;
+}
+
+
 /* Media Queries */
 
 @media (max-width: 992px){
@@ -263,9 +336,23 @@ hr.light-100{
         font-size: 4em;
         padding: 2rem;
     }
+    .welcome{
+        padding-top: 1.5rem;
+    }
+    .contact-form{
+        padding-left: 2em; 
+        padding-right: 2em;
+    }
+    .contact-deets{
+        padding-left: 2em;
+    }
 }
 
 @media (max-width: 768px){
+
+    .welcome{
+        padding-top: 1rem;
+    }
     .landing-logo{
         size: 75%;
         transform: translateY(100px);
@@ -289,7 +376,32 @@ hr.light-100{
         padding: 0;
     }
     .block{
+        font-size: 100%;
+    }
+
+    #parallax > div{
+        font-size: x-large;
+    }
+    #parallax-2 > div{
+        font-size: x-large;
+    }
+    #parallax-3 > div{
+        font-size: x-large;
+    }
+
+    .lead{
         font-size: 95%;
+    }
+
+    .p-5{
+        padding: 1.8em;
+    }
+    .contact-form{
+        padding-left: 0.8em; 
+        padding-right: 0.8em;
+    }
+    .contact-deets{
+        padding-left: 0.8em;
     }
 
     ::-webkit-scrollbar{
@@ -309,6 +421,39 @@ hr.light-100{
         transform: translateY(20px);
         size: 75%;
     }
+
+    .about-heading{
+        font-size: 60%;
+    }
+    .lead{
+        font-size: 90%;
+    }
+    .about-content{
+        font-size: 85%;
+    }
+    .head-cont{
+        font-size: 90%;
+    }
+    .contact-form{
+        padding-left: 0.8em; 
+        padding-right: 0.8em;
+    }
+    .contact-deets{
+        padding-left: 0.8em;
+    }
+    .welcome{
+        padding-top: 1rem;
+    }
+    #parallax > div{
+        font-size: large;
+    }
+    #parallax-2 > div{
+        font-size: large;
+    }
+    #parallax-3 > div{
+        font-size: large;
+    }
+
 
 }
 
