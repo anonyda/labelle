@@ -109,36 +109,57 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
-                <div id="map" style="width: 100%; height: 100%;"></div>
-                <script type="text/javascript" charset="utf-8">
-                    //Initialize the Platform object:
-                    var platform = new H.service.Platform({
-                        'apikey': 'jhF5PT5qiiRHghTMtOuN2gh099fYe-SzJWmDLSxadW4'
-                    });
-                
-                    // Get the default map types from the Platform object:
-                    var defaultLayers = platform.createDefaultLayers();
-                
-                    // Instantiate the map:
-                    var map = new H.Map(
-                        document.getElementById('map'),
-                        defaultLayers.vector.normal.map,
-                        {
-                            zoom: 20,
-                            center: { lng: 72.8213, lat: 18.9127  }
-                        });
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3580476394504!2d73.87743611420402!3d18.51271527424779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c119614fbea9%3A0x8339291792e41d23!2sLa%20Belle%20Salon%2C%20Bridal%20Studio%20and%20Academy!5e0!3m2!1sen!2sin!4v1600531474580!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+               <!-- <script type="text/javascript" charset="utf-8">
+    
+                    function addMarkerToMap(map) {
 
-                        var icon = new H.map.Icon('img/location.png');
-
-                        // Create a marker using the previously instantiated icon:
-                        var marker = new H.map.Marker({ lat: 72.8213, lng: 18.9127 }, {icon: icon});
-
-                        // Add the marker to the map:
+                        var svgMarkup = '<svg width="24" height="24" ' +
+                        'xmlns="http://www.w3.org/2000/svg">' +
+                        '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
+                        'height="22" /><text x="12" y="18" font-size="12pt" ' +
+                        'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
+                        'fill="white">L</text></svg>';
+                        var icon = new H.map.Icon(svgMarkup),
+                        coords = {lat:18.910000, lng:72.809998},
+                        marker = new H.map.Marker(coords, {icon: icon});
                         map.addObject(marker);
-                
-                    // Create the default UI:
+                        map.setCenter(coords);
+
+                        //var labelleMarker = new H.map.Marker({lat:18.910000, lng:72.809998});
+                        //map.addObject(labelleMarker);
+                    }       
+                    var platform = new H.service.Platform({
+                        apikey: 'jhF5PT5qiiRHghTMtOuN2gh099fYe-SzJWmDLSxadW4'
+                    });
+                    var defaultLayers = platform.createDefaultLayers();
+
+                    //Step 2: initialize a map - this map is centered over Europe
+                    var map = new H.Map(document.getElementById('map'),
+                    defaultLayers.vector.normal.map,{
+                    center: {lat:18.910000, lng:72.809998},
+                    zoom: 15,
+                    pixelRatio: window.devicePixelRatio || 1
+                    });
+                    // add a resize listener to make sure that the map occupies the whole container
+                    window.addEventListener('resize', () => map.getViewPort().resize());
+
+                    //Step 3: make the map interactive
+                    // MapEvents enables the event system
+                    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+                    //var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+                    // Create the default UI components
                     var ui = H.ui.UI.createDefault(map, defaultLayers);
-                </script>
+
+                    // Now use the map as required...
+                    window.onload = function () {
+                    addMarkerToMap(map);
+                    }
+
+                </script>-->
             </div>
         </div>
     </div>
